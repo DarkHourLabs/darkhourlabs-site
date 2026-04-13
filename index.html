@@ -13,6 +13,11 @@
       box-sizing: border-box;
     }
 
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
     :root {
       --bg: #0a0a0a;
       --surface: #111111;
@@ -797,7 +802,8 @@
         backdrop-filter: blur(10px);
       }
 
-      .hero { padding: 6rem 1.5rem 3rem; }
+      .hero { padding: 6rem 1.5rem 3rem; min-height: 80vh; }
+      .hero h1 { font-size: 2rem; line-height: 1.2; }
 
       .cta-buttons {
         flex-direction: column;
@@ -807,11 +813,18 @@
 
       .btn { width: 100%; text-align: center; }
 
+      .services, .about, .contact { padding: 4rem 1.5rem; }
+
       .services-grid,
       .portfolio-grid,
       .form-row { flex-direction: column; }
       .about-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+      section, .services-grid, .about-grid, .about-content, .contact-form {
+        max-width: 100% !important;
+        width: 100%;
+      }
 
       .glow-orb { opacity: 0.03; }
     }
