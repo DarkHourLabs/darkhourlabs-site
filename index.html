@@ -785,7 +785,7 @@
       transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       .menu-toggle { display: flex; }
       .nav-links { display: none; }
       .nav-links.open {
@@ -816,7 +816,7 @@
       .services, .about, .contact { padding: 4rem 1.5rem; }
 
       .services-grid,
-      .portfolio-grid,
+      .portfolio-grid { grid-template-columns: 1fr !important; }
       .form-row { flex-direction: column; }
       .about-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
