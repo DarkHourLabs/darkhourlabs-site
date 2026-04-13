@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Option 4: DH Monogram -->
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#888888;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0a0a0a"/>
+  <!-- D letterform -->
+  <path d="M45 40 L45 160 L80 160 Q120 160 120 100 Q120 40 80 40 Z" fill="none" stroke="url(#g4)" stroke-width="3"/>
+  <!-- H crossbar integrated into D -->
+  <line x1="45" y1="100" x2="120" y2="100" stroke="url(#g4)" stroke-width="2.5"/>
+  <!-- H right vertical extends from crossbar -->
+  <line x1="135" y1="40" x2="135" y2="160" stroke="url(#g4)" stroke-width="3"/>
+  <!-- Subtle connection -->
+  <line x1="120" y1="100" x2="135" y2="100" stroke="url(#g4)" stroke-width="2.5"/>
+  <text x="100" y="198" text-anchor="middle" fill="#555" font-family="-apple-system, sans-serif" font-size="8" letter-spacing="3">DARK HOUR LABS</text>
+</svg>

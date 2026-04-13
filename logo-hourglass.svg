@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Dark Hour Labs Logo — Hourglass Mark -->
+  <defs>
+    <linearGradient id="hg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="100%" style="stop-color:#999999"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="#0a0a0a"/>
+  <!-- Hourglass outer -->
+  <path d="M170 80 L342 80 L256 220 L170 80 Z" fill="none" stroke="url(#hg-grad)" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M170 432 L342 432 L256 292 L170 432 Z" fill="url(#hg-grad)" stroke="url(#hg-grad)" stroke-width="6" stroke-linejoin="round"/>
+  <!-- Center neck -->
+  <line x1="256" y1="220" x2="256" y2="292" stroke="url(#hg-grad)" stroke-width="4" opacity="0.6"/>
+  <!-- Subtle side lines -->
+  <line x1="170" y1="80" x2="170" y2="432" stroke="url(#hg-grad)" stroke-width="1.5" opacity="0.1"/>
+  <line x1="342" y1="80" x2="342" y2="432" stroke="url(#hg-grad)" stroke-width="1.5" opacity="0.1"/>
+  <!-- Top bar -->
+  <line x1="140" y1="80" x2="372" y2="80" stroke="url(#hg-grad)" stroke-width="3" opacity="0.3"/>
+  <!-- Bottom bar -->
+  <line x1="140" y1="432" x2="372" y2="432" stroke="url(#hg-grad)" stroke-width="3" opacity="0.3"/>
+</svg>

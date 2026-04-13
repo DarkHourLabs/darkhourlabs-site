@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Option 5: The Pulse Line -->
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" fill="#0a0a0a"/>
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="65" fill="none" stroke="url(#g5)" stroke-width="2"/>
+  <!-- Inner circle (subtle) -->
+  <circle cx="100" cy="100" r="60" fill="none" stroke="url(#g5)" stroke-width="0.5" opacity="0.2"/>
+  <!-- Pulse/heartbeat line -->
+  <polyline points="35,100 65,100 75,100 82,60 92,140 102,80 108,110 115,100 165,100" 
+    fill="none" stroke="url(#g5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Glow effect on peak -->
+  <circle cx="92" cy="140" r="3" fill="#06b6d4" opacity="0.6"/>
+  <circle cx="82" cy="60" r="3" fill="#06b6d4" opacity="0.6"/>
+  <text x="100" y="198" text-anchor="middle" fill="#555" font-family="-apple-system, sans-serif" font-size="8" letter-spacing="3">DARK HOUR LABS</text>
+</svg>
