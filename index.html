@@ -13,9 +13,16 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html {
       overflow-x: hidden;
       width: 100%;
+    }
+    body {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
+      -webkit-overflow-scrolling: touch;
     }
 
     :root {
@@ -37,6 +44,13 @@
       color: var(--text);
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    .page-wrapper {
+      overflow-x: hidden;
+      width: 100%;
+      max-width: 100vw;
+      position: relative;
     }
 
     /* ── Background effects ── */
@@ -105,21 +119,21 @@
     .glow-orb-1 {
       width: 700px; height: 700px;
       background: var(--glow-blue);
-      top: -250px; right: -250px;
+      top: -350px; right: -350px;
       animation: orbDrift 20s ease-in-out infinite;
     }
 
     .glow-orb-2 {
       width: 500px; height: 500px;
       background: var(--glow-purple);
-      bottom: 20%; left: -200px;
+      bottom: 20%; left: -250px;
       animation: orbDrift 25s ease-in-out infinite reverse;
     }
 
     .glow-orb-3 {
       width: 350px; height: 350px;
       background: var(--glow-cyan);
-      top: 40%; left: 55%;
+      top: 40%; left: 50%;
       animation: orbDrift 18s ease-in-out infinite 2s;
     }
 
@@ -856,6 +870,7 @@
   </style>
 </head>
 <body>
+<div class="page-wrapper">
 
   <!-- Background effects -->
   <div class="particles" id="particles"></div>
@@ -1166,5 +1181,6 @@
       }
     });
   </script>
+</div>
 </body>
 </html>
