@@ -754,6 +754,20 @@
 
     @media (max-width: 640px) {
       .nav-links { display: none; }
+    .nav-links.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.95);
+      padding: 1rem 2rem;
+      gap: 1rem;
+      border-bottom: 1px solid #1a1a1a;
+      backdrop-filter: blur(10px);
+    }
+    .menu-toggle { display: flex; }
 
       .hero { padding: 6rem 1.5rem 3rem; }
 
@@ -767,10 +781,41 @@
 
       .services-grid,
       .portfolio-grid,
+      .form-row { flex-direction: column; }
       .about-grid { grid-template-columns: 1fr; }
+
+      .menu-toggle { display: flex; }
       .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
 
       .glow-orb { opacity: 0.03; }
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 100;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
     }
 
     /* ── Scroll animations ── */
@@ -806,7 +851,10 @@
       </svg>
       Dark Hour<span>Labs</span>
     </a>
-    <ul class="nav-links">
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -987,6 +1035,21 @@
         container.appendChild(p);
       }
     })();
+
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    // Close menu on link click
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
 
     // Smooth scroll
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
