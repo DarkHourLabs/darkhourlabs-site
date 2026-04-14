@@ -850,6 +850,7 @@
 
       .services-grid,
       .portfolio-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+      #process .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .form-row { flex-direction: column; }
       .about-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
@@ -914,8 +915,7 @@
       <span class="highlight">IT Strategy & AI Solutions</span> that work while you sleep<span class="cursor"></span>
     </h1>
     <p>
-      Most businesses know they need better IT and AI — they just don't know where to start.
-      Dark Hour Labs brings 15+ years of enterprise IT experience and modern AI solutions to find the bottlenecks, build the plan, and deploy the systems that actually move the needle.
+      Technology should accelerate your business — not hold it back. Dark Hour Labs brings 15+ years of enterprise IT experience and modern AI solutions to find the bottlenecks, build the plan, and deploy systems that deliver measurable results. We don't sell tools. We solve problems.
     </p>
     <div class="cta-buttons">
       <a href="#contact" class="btn btn-primary">Get Started</a>
@@ -1013,28 +1013,58 @@
   <section id="process" class="services">
     <div class="section-header reveal">
       <h2>How It Works</h2>
-      <p>From problem to production in four steps</p>
+      <p>From problem to production — with accountability at every step</p>
     </div>
     <div class="services-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
       <div class="service-card reveal" style="text-align: center;">
         <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">01</div>
         <h3 style="font-size: 1.1rem;">Discover</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">We audit your current systems, workflows, and pain points to find where technology delivers the highest impact.</p>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Deep audit of your systems, workflows, and pain points. We identify where technology delivers the highest ROI — and where it's currently leaking money.</p>
       </div>
       <div class="service-card reveal" style="text-align: center;">
         <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">02</div>
         <h3 style="font-size: 1.1rem;">Design</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">We architect a solution aligned to your business goals — no over-engineering, no vendor lock-in, just what works.</p>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Solution architecture aligned to your business goals. No over-engineering, no vendor lock-in. Every recommendation ties back to a measurable outcome.</p>
       </div>
       <div class="service-card reveal" style="text-align: center;">
         <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">03</div>
         <h3 style="font-size: 1.1rem;">Build</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">We develop, configure, and deploy — integrating with your existing stack so your team doesn't skip a beat.</p>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Develop, configure, and deploy — integrating with your existing stack. Your team keeps moving while we build behind the scenes.</p>
       </div>
       <div class="service-card reveal" style="text-align: center;">
         <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">04</div>
         <h3 style="font-size: 1.1rem;">Optimize</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">We monitor, measure, and refine. Technology isn't set-it-and-forget-it — we make sure it keeps delivering.</p>
+        <p style="font-size: 0.875rem; color: var(--text-muted);">Monitor, measure, and refine against the KPIs we set in Discover. Technology isn't set-it-and-forget-it — we hold ourselves accountable to results.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section id="industries" class="services" style="background: var(--bg);">
+    <div class="section-header reveal">
+      <h2>Industries We Serve</h2>
+      <p>Enterprise experience across sectors that can't afford downtime</p>
+    </div>
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
+        <h3 style="font-size: 1rem;">Healthcare</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">HIPAA compliance, EHR integration, patient data security</p>
+      </div>
+      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
+        <h3 style="font-size: 1rem;">Financial Services</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">PCI compliance, fraud detection, secure transaction processing</p>
+      </div>
+      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
+        <h3 style="font-size: 1rem;">Real Estate</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">CRM integration, document automation, multi-location IT</p>
+      </div>
+      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
+        <h3 style="font-size: 1rem;">Cannabis</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Seed-to-sale compliance, multi-state operations, M&A integration</p>
+      </div>
+      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
+        <h3 style="font-size: 1rem;">Professional Services</h3>
+        <p style="font-size: 0.8rem; color: var(--text-muted);">Client onboarding automation, billing integration, secure comms</p>
       </div>
     </div>
   </section>
@@ -1060,19 +1090,19 @@
       <div class="about-stats reveal">
         <div class="stat-card">
           <div class="stat-number"><span class="accent">15+</span></div>
-          <div class="stat-label">Years IT Experience</div>
+          <div class="stat-label">Years Enterprise IT</div>
         </div>
         <div class="stat-card">
           <div class="stat-number"><span class="accent">24/7</span></div>
           <div class="stat-label">Agent Uptime</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number"><span class="accent">8+</span></div>
-          <div class="stat-label">Hours Saved / Month</div>
+          <div class="stat-number"><span class="accent">40%</span></div>
+          <div class="stat-label">Avg. Process Time Saved</div>
         </div>
         <div class="stat-card">
-          <div class="stat-number"><span class="accent">100%</span></div>
-          <div class="stat-label">Custom Solutions</div>
+          <div class="stat-number"><span class="accent">Zero</span></div>
+          <div class="stat-label">Vendor Lock-In</div>
         </div>
       </div>
     </div>
