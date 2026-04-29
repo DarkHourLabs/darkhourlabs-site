@@ -399,7 +399,6 @@
     .service-card:nth-child(3)::before { background: linear-gradient(90deg, #9333ea, #f59e0b); }
     .service-card:nth-child(4)::before { background: linear-gradient(90deg, #06b6d4, #9333ea); }
     .service-card:nth-child(5)::before { background: linear-gradient(90deg, #f59e0b, #ef4444); }
-    .service-card:nth-child(6)::before { background: linear-gradient(90deg, #4a6cf7, #06b6d4); }
 
     .service-card:hover {
       border-color: rgba(255,255,255,0.1);
@@ -424,6 +423,27 @@
       font-size: 0.925rem;
     }
 
+    .service-card ul {
+      margin-top: 0.75rem;
+      padding-left: 1.25rem;
+      list-style: none;
+    }
+
+    .service-card ul li {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .service-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: -1.25rem;
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
     .service-icon {
       width: 44px;
       height: 44px;
@@ -441,116 +461,69 @@
       height: 100%;
     }
 
-    /* ── Portfolio ── */
-
-    .portfolio {
-      padding: 7rem 2rem;
-      background: var(--bg);
-      position: relative;
+    /* ── Industries sub-row within Who It's For ── */
+    .industries-row {
+      margin-top: 3rem;
     }
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
+    .industries-row .section-subheader {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
-    .project-card {
-      background: var(--surface);
-      border-radius: 12px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .project-card:hover {
-      border-color: rgba(255,255,255,0.1);
-      transform: translateY(-4px);
-    }
-
-    .project-image {
-      width: 100%;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .project-image-bg {
-      position: absolute;
-      inset: 0;
-      opacity: 0.15;
-    }
-
-    .project-image-bg.p1 { background: linear-gradient(135deg, #4a6cf7 0%, #1a1a2e 100%); }
-    .project-image-bg.p2 { background: linear-gradient(135deg, #06b6d4 0%, #1a1a2e 100%); }
-    .project-image-bg.p3 { background: linear-gradient(135deg, #9333ea 0%, #1a1a2e 100%); }
-    .project-image-bg.p4 { background: linear-gradient(135deg, #f59e0b 0%, #1a1a2e 100%); }
-
-    .project-image::after {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 100%; height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
-      animation: shimmer 6s ease-in-out infinite;
-    }
-
-    @keyframes shimmer {
-      0%, 100% { left: -100%; }
-      50% { left: 100%; }
-    }
-
-    .project-visual {
-      width: 56px;
-      height: 56px;
-      opacity: 0.6;
-      z-index: 1;
-      color: var(--text);
-    }
-
-    .project-visual svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .project-content {
-      padding: 1.75rem 2rem 2rem;
-    }
-
-    .project-content h3 {
-      font-size: 1.15rem;
+    .industries-row .section-subheader h3 {
+      font-size: 1.1rem;
       font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .industries-row .services-grid {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+    }
+
+    .industries-row .service-card {
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .industries-row .service-card h3 {
+      font-size: 0.95rem;
       margin-bottom: 0.5rem;
-      letter-spacing: -0.3px;
     }
 
-    .project-content p {
+    .industries-row .service-card p {
+      font-size: 0.8rem;
+      line-height: 1.6;
+    }
+
+    /* ── Process grid ── */
+    #process .services-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    #process .service-card {
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+
+    #process .service-card .step-number {
+      font-size: 2rem;
+      font-weight: 700;
       color: var(--text-muted);
-      font-size: 0.9rem;
-      line-height: 1.65;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+      opacity: 0.3;
     }
 
-    .project-tags {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
+    #process .service-card h3 {
+      font-size: 1.1rem;
     }
 
-    .tag {
-      background: rgba(255,255,255,0.05);
-      color: var(--text-muted);
-      padding: 0.2rem 0.65rem;
-      border-radius: 100px;
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      border: 1px solid rgba(255,255,255,0.05);
+    #process .service-card p {
+      font-size: 0.875rem;
     }
 
     /* ── About ── */
@@ -848,12 +821,13 @@
 
       .services, .about, .contact { padding: 4rem 1.5rem; }
 
-      .services-grid,
-      .portfolio-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
+      .services-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
       #process .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
       .form-row { flex-direction: column; }
       .about-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+      .industries-row .services-grid { grid-template-columns: repeat(2, 1fr) !important; }
 
       section, .services-grid, .about-grid, .about-content, .contact-form {
         max-width: 100% !important;
@@ -903,9 +877,9 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#process">How It Works</a></li>
-      <li><a href="#services">How We Work</a></li>
+      <li><a href="#services">What We Do</a></li>
       <li><a href="#who-its-for">Who It's For</a></li>
+      <li><a href="#process">How We Work</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -920,7 +894,7 @@
     </p>
     <div class="cta-buttons">
       <a href="#diagnostic" class="btn btn-primary">Get a Free Diagnostic</a>
-      <a href="#services" class="btn btn-secondary">See How We Work</a>
+      <a href="#services" class="btn btn-secondary">See What We Do</a>
     </div>
     <div class="hero-line"></div>
   </section>
@@ -943,41 +917,11 @@
     </div>
   </section>
 
-  <!-- How It Works -->
-  <section id="process" class="services">
-    <div class="section-header reveal">
-      <h2>How It Works</h2>
-      <p>Controlled implementation — with accountability at every step</p>
-    </div>
-    <div class="services-grid" style="grid-template-columns: repeat(4, 1fr); gap: 2rem;">
-      <div class="service-card reveal" style="text-align: center;">
-        <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">01</div>
-        <h3 style="font-size: 1.1rem;">Diagnose</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">Audit workflows, data quality, and decision points. Where can AI create leverage? Where is it not ready?</p>
-      </div>
-      <div class="service-card reveal" style="text-align: center;">
-        <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">02</div>
-        <h3 style="font-size: 1.1rem;">Architect</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">Design solutions with clear human approval points. No over-engineering. Every recommendation ties to a measurable outcome.</p>
-      </div>
-      <div class="service-card reveal" style="text-align: center;">
-        <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">03</div>
-        <h3 style="font-size: 1.1rem;">Implement</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">Deploy controlled systems that integrate with your stack. Your team keeps moving while we build behind the scenes.</p>
-      </div>
-      <div class="service-card reveal" style="text-align: center;">
-        <div style="font-size: 2rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.75rem; opacity: 0.3;">04</div>
-        <h3 style="font-size: 1.1rem;">Govern</h3>
-        <p style="font-size: 0.875rem; color: var(--text-muted);">Define where AI acts, where humans approve, and how outputs are reviewed. Accountability built in.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- How We Work -->
+  <!-- What We Do -->
   <section id="services" class="services">
     <div class="section-header reveal">
-      <h2>How We Work</h2>
-      <p>Forward-deployed implementation. Not consultancy theater.</p>
+      <h2>What We Do</h2>
+      <p>Implementation, not recommendations. Systems that ship.</p>
     </div>
     <div class="services-grid">
       <div class="service-card reveal">
@@ -990,8 +934,14 @@
             <line x1="22" y1="28" x2="22" y2="35"/><line x1="14" y1="35" x2="30" y2="35"/>
           </svg>
         </div>
-        <h3>Map How Work Moves</h3>
-        <p>We embed with your team, audit workflows, data, SOPs, and handoffs. We identify where AI creates value without adding risk — before building anything.</p>
+        <h3>IT Strategy & Infrastructure</h3>
+        <p>We build the plan and see it through — not hand you a PDF and disappear.</p>
+        <ul>
+          <li>Cloud migration</li>
+          <li>Cybersecurity hardening</li>
+          <li>Vendor management</li>
+          <li>Digital transformation</li>
+        </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
@@ -1000,8 +950,15 @@
             <path d="M15 22l5 5 9-9" stroke-width="2"/>
           </svg>
         </div>
-        <h3>Build Controlled Systems</h3>
-        <p>Custom agents, data pipelines, dashboards, review layers. The common thread: control. AI supports the workflow; your team keeps approval rights.</p>
+        <h3>Compliance & Security</h3>
+        <p>We identify vulnerabilities before they become breaches and build the remediation roadmap.</p>
+        <ul>
+          <li>SOC 2</li>
+          <li>HIPAA</li>
+          <li>PCI</li>
+          <li>Penetration testing</li>
+          <li>Incident response</li>
+        </ul>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
@@ -1012,30 +969,13 @@
             <path d="M35 7V5M35 15v-2M32 10h-2M40 10h-2" stroke-width="1"/>
           </svg>
         </div>
-        <h3>Define the Approval Model</h3>
-        <p>Clear boundaries: where AI acts, where humans approve, how outputs are reviewed. Not an uncontrolled black box. AI your auditors can understand.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- What We Deliver -->
-  <section id="deliver" class="services" style="background: var(--bg);">
-    <div class="section-header reveal">
-      <h2>What We Deliver</h2>
-      <p>Implementation, not recommendations. Systems that ship.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <h3>IT Strategy & Infrastructure</h3>
-        <p>Cloud migration, cybersecurity hardening, vendor management, and digital transformation roadmaps. We build the plan and see it through — not hand you a PDF and disappear.</p>
-      </div>
-      <div class="service-card reveal">
-        <h3>Compliance & Security</h3>
-        <p>SOC 2, HIPAA, PCI frameworks, penetration testing coordination, incident response planning. We identify vulnerabilities before they become breaches and build the remediation roadmap.</p>
-      </div>
-      <div class="service-card reveal">
         <h3>Process Automation & M&A</h3>
-        <p>Workflow automation, system integration, and M&A IT consolidation. We connect your tools into pipelines that eliminate manual work and get acquired businesses operational fast.</p>
+        <p>We connect your tools into pipelines that eliminate manual work and get acquired businesses operational fast.</p>
+        <ul>
+          <li>Workflow automation</li>
+          <li>System integration</li>
+          <li>M&A IT consolidation</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -1074,34 +1014,63 @@
         <p style="font-size: 0.85rem; color: var(--text-muted);">Where AI assists, not acts alone. Human approval at every important step</p>
       </div>
     </div>
+
+    <!-- Industries sub-row -->
+    <div class="industries-row">
+      <div class="section-subheader reveal">
+        <h3>Industries We Serve</h3>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <h3>Healthcare</h3>
+          <p>HIPAA compliance, EHR integration, patient data security</p>
+        </div>
+        <div class="service-card reveal">
+          <h3>Financial Services</h3>
+          <p>PCI compliance, fraud detection, secure transaction processing</p>
+        </div>
+        <div class="service-card reveal">
+          <h3>Real Estate</h3>
+          <p>CRM integration, document automation, multi-location IT</p>
+        </div>
+        <div class="service-card reveal">
+          <h3>Multi-State Operations</h3>
+          <p>Multi-state compliance, distributed IT, M&A integration</p>
+        </div>
+        <div class="service-card reveal">
+          <h3>Professional Services</h3>
+          <p>Client onboarding automation, billing integration, secure comms</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <!-- Industries -->
-  <section id="industries" class="services" style="background: var(--bg);">
+  <!-- How We Work -->
+  <section id="process" class="services" style="background: var(--bg);">
     <div class="section-header reveal">
-      <h2>Industries We Serve</h2>
-      <p>Enterprise experience across sectors that can't afford downtime</p>
+      <h2>How We Work</h2>
+      <p>Controlled implementation — with accountability at every step</p>
     </div>
-    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
-      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
-        <h3 style="font-size: 1rem;">Healthcare</h3>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">HIPAA compliance, EHR integration, patient data security</p>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="step-number">01</div>
+        <h3>Diagnose</h3>
+        <p>Audit workflows, data quality, and decision points. Where can AI create leverage? Where is it not ready?</p>
       </div>
-      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
-        <h3 style="font-size: 1rem;">Financial Services</h3>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">PCI compliance, fraud detection, secure transaction processing</p>
+      <div class="service-card reveal">
+        <div class="step-number">02</div>
+        <h3>Architect</h3>
+        <p>Design solutions with clear human approval points. No over-engineering. Every recommendation ties to a measurable outcome.</p>
       </div>
-      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
-        <h3 style="font-size: 1rem;">Real Estate</h3>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">CRM integration, document automation, multi-location IT</p>
+      <div class="service-card reveal">
+        <div class="step-number">03</div>
+        <h3>Implement</h3>
+        <p>Deploy controlled systems that integrate with your stack. Your team keeps moving while we build behind the scenes.</p>
       </div>
-      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
-        <h3 style="font-size: 1rem;">Multi-State Operations</h3>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Multi-state compliance, distributed IT, M&A integration</p>
-      </div>
-      <div class="service-card reveal" style="text-align: center; padding: 1.75rem;">
-        <h3 style="font-size: 1rem;">Professional Services</h3>
-        <p style="font-size: 0.8rem; color: var(--text-muted);">Client onboarding automation, billing integration, secure comms</p>
+      <div class="service-card reveal">
+        <div class="step-number">04</div>
+        <h3>Govern</h3>
+        <p>Define where AI acts, where humans approve, and how outputs are reviewed. Accountability built in.</p>
       </div>
     </div>
   </section>
